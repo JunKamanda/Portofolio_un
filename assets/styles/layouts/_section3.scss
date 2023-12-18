@@ -11,6 +11,11 @@
         align-items: start;
         gap: 20px;
 
+        @media screen and (max-width: 750px) {
+            grid-template-columns: 1fr;
+            gap: 30px;
+         }
+
         .details{
             width: 100%;
 
@@ -21,6 +26,11 @@
                 letter-spacing: 1px;
                 padding-bottom: 25px;
                 text-align: center;
+
+                @media screen and (max-width: 750px) {
+                    font-size: 1rem;
+                    padding-bottom: 17px;
+                 }
             }
         }
         .formation{

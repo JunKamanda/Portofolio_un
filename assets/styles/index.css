@@ -52,6 +52,7 @@ h2 span {
 
 #header {
   padding: 0 70px;
+  min-height: 100vh;
 }
 #header .nav_section {
   min-height: 10vh;
@@ -67,11 +68,26 @@ h2 span {
   padding: 5px 0;
   width: 100%;
 }
+@media screen and (max-width: 800px) {
+  #header .nav_section {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 550px) {
+  #header .nav_section {
+    display: none;
+  }
+}
 #header .nav_section .logo h1 a {
   font-size: 1.7rem;
   color: rgb(207, 118, 150);
   text-transform: uppercase;
   font-family: Fjalla;
+}
+@media screen and (max-width: 800px) {
+  #header .nav_section .logo {
+    display: none;
+  }
 }
 #header .nav_section nav {
   display: -webkit-box;
@@ -86,17 +102,26 @@ h2 span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 7px;
   width: 100%;
   font-size: 0.8rem;
+}
+@media screen and (max-width: 800px) {
+  #header .nav_section nav ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 #header .nav_section nav ul li {
   padding: 2px 10px;
   position: relative;
   cursor: pointer;
   text-transform: uppercase;
+  text-align: center;
 }
 #header .nav_section nav ul li a {
   font-size: 0.7rem;
@@ -139,38 +164,66 @@ h2 span {
 #header .hero_section {
   min-height: 90vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 45% 65%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (max-width: 800px) {
+  #header .hero_section {
+    grid-template-columns: 1fr;
+    padding: 30px 0 0;
+  }
+}
 #header .hero_section .left {
   padding: 0 10px;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  #header .hero_section .left h2 {
+    font-size: 2rem;
+    text-align: left;
+  }
 }
 #header .hero_section .left .titre {
-  margin: 8px 0 20px;
+  margin: 8px auto 20px;
 }
 #header .hero_section .left p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   line-height: 20px;
   font-family: Roboto;
   font-weight: bold;
   width: 80%;
 }
+@media screen and (max-width: 800px) {
+  #header .hero_section .left p {
+    margin: 0 auto;
+    text-align: left;
+    width: 100%;
+  }
+}
 #header .hero_section .right {
-  background: url(../img/junior.png) center/cover no-repeat;
-  width: 100%;
   height: 100%;
 }
-#header .hero_section .right p {
-  text-align: center;
-  color: rgb(207, 118, 150);
-  letter-spacing: 1px;
-  font-weight: bold;
+@media screen and (max-width: 800px) {
+  #header .hero_section .right {
+    display: none;
+  }
+}
+#header .hero_section .right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 #section1 {
   padding: 20px 70px 0;
+}
+@media screen and (max-width: 800px) {
+  #section1 {
+    padding: 0 70px 0;
+  }
 }
 #section1 .about {
   display: grid;
@@ -181,10 +234,26 @@ h2 span {
   gap: 10px;
   min-height: 80vh;
 }
+@media screen and (max-width: 800px) {
+  #section1 .about {
+    grid-template-columns: 1fr;
+  }
+}
 #section1 .about .left {
-  background: url(../img/junior.png) center/cover no-repeat;
   width: 100%;
   height: 100%;
+}
+#section1 .about .left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 800px) {
+  #section1 .about .left {
+    height: 100%;
+    width: 70%;
+  }
 }
 #section1 .about .right {
   padding: 0 10px;
@@ -366,6 +435,12 @@ h2 span {
           justify-content: space-between;
   gap: 8px 0px;
 }
+@media screen and (max-width: 800px) {
+  #section2 .cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 8px;
+  }
+}
 #section2 .cards .card {
   padding: 10px;
   border: 1px solid rgba(128, 128, 128, 0.493);
@@ -428,6 +503,12 @@ h2 span {
           align-items: start;
   gap: 20px;
 }
+@media screen and (max-width: 750px) {
+  #section3 .cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
 #section3 .cards .details {
   width: 100%;
 }
@@ -438,6 +519,12 @@ h2 span {
   letter-spacing: 1px;
   padding-bottom: 25px;
   text-align: center;
+}
+@media screen and (max-width: 750px) {
+  #section3 .cards .details .titre {
+    font-size: 1rem;
+    padding-bottom: 17px;
+  }
 }
 #section3 .cards .formation {
   background: #fff;
@@ -508,6 +595,11 @@ h2 span {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 10px;
+}
+@media screen and (max-width: 750px) {
+  #section4 .card_content .cards {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 #section4 .card_content .cards .card {
   height: 140px;
@@ -585,6 +677,11 @@ h2 span {
 #section5 {
   padding: 40px 70px;
 }
+@media screen and (max-width: 750px) {
+  #section5 {
+    display: none;
+  }
+}
 #section5 h2 {
   text-align: center;
   padding: 10px 0 40px;
@@ -647,6 +744,12 @@ h2 span {
           justify-content: space-between;
   gap: 10px;
 }
+@media screen and (max-width: 600px) {
+  #section6 .informations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
 #section6 .informations .infos {
   width: 25%;
 }
@@ -667,6 +770,14 @@ h2 span {
 #section6 .informations .infos .mail a {
   color: rgb(207, 118, 150);
 }
+@media screen and (max-width: 750px) {
+  #section6 .informations .infos {
+    width: 100%;
+  }
+  #section6 .informations .infos:nth-child(4) {
+    display: none;
+  }
+}
 #section6 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -675,6 +786,11 @@ h2 span {
           align-items: start;
   gap: 20px;
   padding: 30px 0;
+}
+@media screen and (max-width: 750px) {
+  #section6 .form {
+    grid-template-columns: 1fr;
+  }
 }
 #section6 .form form {
   display: grid;
@@ -704,6 +820,11 @@ h2 span {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
+@media screen and (max-width: 750px) {
+  #section6 .form form input, #section6 .form form textarea {
+    width: 70%;
+  }
+}
 #section6 .form form textarea {
   height: 100px;
 }
@@ -716,6 +837,11 @@ h2 span {
   width: 100%;
   height: 100%;
   border: none;
+}
+@media screen and (max-width: 750px) {
+  #section6 .form .carte {
+    display: none;
+  }
 }
 
 #footer {

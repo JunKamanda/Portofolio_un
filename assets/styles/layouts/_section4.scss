@@ -41,6 +41,10 @@
             justify-content: center;
             gap: 10px;
 
+            @media screen and (max-width: 750px) {
+                grid-template-columns: 1fr 1fr;
+            }
+
             .card{
                 height: 140px;
                 border: 1px solid rgba(128, 128, 128, 0.459);

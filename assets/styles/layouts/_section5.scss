@@ -1,6 +1,10 @@
 #section5{
     padding: 40px 70px;
 
+    @media screen and (max-width: 750px) {
+        display: none;
+    }
+
     h2{
         text-align: center;
         padding: 10px 0 40px;

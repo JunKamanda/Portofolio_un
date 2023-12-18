@@ -11,6 +11,11 @@
         justify-content: space-between;
         gap: 8px 0px;
 
+        @media screen and (max-width: 800px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 8px;
+        }
+
         .card{
             padding: 10px;
             border: 1px solid rgba(128, 128, 128, 0.493);
