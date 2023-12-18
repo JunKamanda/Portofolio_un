@@ -1,0 +1,158 @@
+#section1{
+    padding: 20px 70px 0;
+
+    .about{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 10px;
+
+        min-height: 80vh;
+
+        .left{
+            background: url(../img/junior.png) center/cover no-repeat;
+            width: 100%;
+            height: 100%;
+        }
+
+        .right{
+            padding: 0 10px;
+
+            p{
+                font-size: .8rem;
+                line-height: 20px;
+                font-family: $font1;
+                font-weight: bold;
+                width: 85%;
+                margin: 15px 0;
+            }
+
+            .socials{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                div{
+                    width: 30px;
+                    height: 30px;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    svg{
+                        transition: .4s ease-in-out;
+                    }
+
+                    &:hover svg{
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+
+            .progress{
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+
+                .progression{
+
+                    p{
+                        margin-bottom: 4px;
+                    }
+                    .progress_bar{
+                        width: 100%;
+                        height: 10px;
+                        box-shadow: inset 0 1px 4px 0px #00000093;
+                    }
+                    .web{
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            left: 0;
+                            top: 0;
+                            width: 0;
+                            height: 100%;
+                            background: green;
+                            animation: progress1 7s forwards;
+                            transition: width .4s ease;
+
+                            @keyframes progress1 {
+                                to{
+                                    width: 65%;
+                                }
+                            }
+                        }
+                    }
+                    .graphic{
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            left: 0;
+                            top: 0;
+                            width: 0;
+                            height: 100%;
+                            background: blue;
+                            animation: progress2 7s forwards;
+                            transition: width .4s ease;
+
+                            @keyframes progress2 {
+                                to{
+                                    width: 60%;
+                                }
+                            }
+                        }
+                    }
+                    .trade{
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            left: 0;
+                            top: 0;
+                            width: 0;
+                            height: 100%;
+                            background: $rose;
+                            animation: progress3 7s forwards;
+                            transition: width .4s ease;
+
+                            @keyframes progress3 {
+                                to{
+                                    width: 40%;
+                                }
+                            }
+                        }
+                    }
+                    .marketing{
+                        position: relative;
+                        &::after{
+                            position: absolute;
+                            content: "";
+                            left: 0;
+                            top: 0;
+                            width: 0;
+                            height: 100%;
+                            background: rgb(255, 115, 0);
+                            animation: progress4 7s forwards;
+                            transition: width .4s ease;
+
+                            @keyframes progress4 {
+                                to{
+                                    width: 45%;
+                                }
+                            }
+                        }
+                    }
+
+                    span{
+                        display: block;
+                        text-align: right;
+                        font-family: $font3;
+                        
+                    }
+                }
+            }
+        }
+    }
+}

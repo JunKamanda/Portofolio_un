@@ -1,0 +1,66 @@
+#section2{
+    padding: 0 70px;
+    text-align: center;
+
+    h2{
+        padding: 70px 0 40px;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: space-between;
+        gap: 8px 0px;
+
+        .card{
+            padding: 10px;
+            border: 1px solid rgba(128, 128, 128, 0.493);
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px 0px #808080a8;
+            cursor: pointer;
+            transition: .4s ease-in-out;
+
+            svg{
+                width: 24px;
+                height: 24px;
+                
+                path{
+                    transition: .4s ease-in-out;
+                }
+            }
+
+            .title{
+                color: $rose;
+                font-weight: bold;
+                font-size: .9rem;
+                font-family: $font3;
+                margin: 10px 0;
+                transition: .4s ease-in-out;
+                
+            }
+            p{
+                font-size: .9rem;
+                line-height: 22px;
+                font-weight: 700;
+                transition: .4s ease-in-out;
+            }
+
+            &:hover{
+                background: $rose;
+
+                .title{
+                    color: #f1f1f1;
+                }
+                svg{
+                    path{
+                        fill: #f1f1f1;
+                    }
+                }
+                p{
+                    color: #f1f1f1;
+                }
+            }
+
+        }
+    }
+
+}

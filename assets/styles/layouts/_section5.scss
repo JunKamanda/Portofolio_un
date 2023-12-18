@@ -1,0 +1,49 @@
+#section5{
+    padding: 40px 70px;
+
+    h2{
+        text-align: center;
+        padding: 10px 0 40px;
+    }
+    .card_content{
+        display: grid;
+        grid-template-columns: 33% 33% 34%;
+        align-items: center;
+        gap: 20px;
+
+
+        .card{
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 1px 1px 5px 0px #808080a8;
+
+            .img{
+                height: 180px;
+                width: 100%;
+                border-radius: 4px;
+                box-shadow: 1px 1px 5px 0px #808080a8;
+                transition: .4s ease-in-out;
+                cursor: pointer;
+
+                &:hover{
+                    transform: scale(.97);
+                }
+            }
+            .un{
+                background: url(../img/blog1.jpg) center/cover no-repeat;
+            }
+            .deux{
+                background: url(../img/blog2.jpg) center/cover;
+            }
+            .trois{
+                background: url(../img/blog3.jpg) center/cover;
+            }
+            p{
+                padding: 30px 10px 10px;
+                font-weight: bold;
+            }
+
+        }
+    }
+}

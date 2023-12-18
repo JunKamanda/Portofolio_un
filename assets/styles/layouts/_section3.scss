@@ -1,0 +1,53 @@
+#section3{
+    padding: 10px 70px 40px;
+
+    h2{
+        padding: 80px 0 40px;
+        text-align: center;
+    }
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        gap: 20px;
+
+        .details{
+            width: 100%;
+
+            .titre{
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+                padding-bottom: 25px;
+                text-align: center;
+            }
+        }
+        .formation{
+            background: #fff;
+            border-radius: 30px;
+            box-shadow: 1px 1px 5px 0px #808080a8;
+            padding: 30px 20px;
+
+            .info{
+                margin-bottom: 20px;
+
+                h3{
+                    color: $rose;
+                    font-size: 1.1rem;
+                }
+                .date{
+                    font-weight: bold;
+                    font-size: .97rem;
+                    margin: 4px 0 10px;
+                }
+                .lorem{
+                    font-size: .9rem;
+                }
+            }
+            .info:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
