@@ -54,6 +54,11 @@ h2 span {
   padding: 0 70px;
   min-height: 100vh;
 }
+@media screen and (max-width: 600px) {
+  #header {
+    padding: 0 30px;
+  }
+}
 #header .nav_section {
   min-height: 10vh;
   display: grid;
@@ -164,7 +169,7 @@ h2 span {
 #header .hero_section {
   min-height: 90vh;
   display: grid;
-  grid-template-columns: 45% 65%;
+  grid-template-columns: 45% 55%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -177,7 +182,6 @@ h2 span {
 }
 #header .hero_section .left {
   padding: 0 10px;
-  text-align: center;
 }
 @media screen and (max-width: 800px) {
   #header .hero_section .left h2 {
@@ -186,7 +190,7 @@ h2 span {
   }
 }
 #header .hero_section .left .titre {
-  margin: 8px auto 20px;
+  margin: 8px 0 20px;
 }
 #header .hero_section .left p {
   font-size: 0.9rem;
@@ -202,9 +206,6 @@ h2 span {
     width: 100%;
   }
 }
-#header .hero_section .right {
-  height: 100%;
-}
 @media screen and (max-width: 800px) {
   #header .hero_section .right {
     display: none;
@@ -213,8 +214,8 @@ h2 span {
 #header .hero_section .right img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #section1 {
@@ -225,23 +226,23 @@ h2 span {
     padding: 0 70px 0;
   }
 }
+@media screen and (max-width: 600px) {
+  #section1 {
+    padding: 20px 30px 0;
+  }
+}
 #section1 .about {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 45% 55%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  min-height: 80vh;
 }
 @media screen and (max-width: 800px) {
   #section1 .about {
     grid-template-columns: 1fr;
   }
-}
-#section1 .about .left {
-  width: 100%;
-  height: 100%;
 }
 #section1 .about .left img {
   width: 100%;
@@ -287,6 +288,17 @@ h2 span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+@media screen and (max-width: 340px) {
+  #section1 .about .right .socials div {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 267px) {
+  #section1 .about .right .socials div {
+    width: 14px;
+  }
 }
 #section1 .about .right .socials div svg {
   -webkit-transition: 0.4s ease-in-out;
@@ -424,6 +436,11 @@ h2 span {
   padding: 0 70px;
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+  #section2 {
+    padding: 0 30px;
+  }
+}
 #section2 h2 {
   padding: 70px 0 40px;
 }
@@ -439,6 +456,11 @@ h2 span {
   #section2 .cards {
     grid-template-columns: 1fr 1fr;
     gap: 8px 8px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #section2 .cards {
+    grid-template-columns: 1fr;
   }
 }
 #section2 .cards .card {
@@ -490,6 +512,11 @@ h2 span {
 
 #section3 {
   padding: 10px 70px 40px;
+}
+@media screen and (max-width: 600px) {
+  #section3 {
+    padding: 10px 30px 40px;
+  }
 }
 #section3 h2 {
   padding: 80px 0 40px;
@@ -555,6 +582,11 @@ h2 span {
 #section4 {
   padding: 40px 70px;
 }
+@media screen and (max-width: 600px) {
+  #section4 {
+    padding: 40px 30px;
+  }
+}
 #section4 h2 {
   text-align: center;
   padding: 10px 0 40px;
@@ -599,6 +631,14 @@ h2 span {
 @media screen and (max-width: 750px) {
   #section4 .card_content .cards {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 550px) {
+  #section4 .card_content .cards {
+    grid-template-columns: 1fr;
+  }
+  #section4 .card_content .cards .idem {
+    display: none;
   }
 }
 #section4 .card_content .cards .card {
@@ -732,6 +772,11 @@ h2 span {
 #section6 {
   padding: 40px 70px 10px;
 }
+@media screen and (max-width: 600px) {
+  #section6 {
+    padding: 40px 30px 10px;
+  }
+}
 #section6 .informations {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -748,6 +793,12 @@ h2 span {
   #section6 .informations {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 550px) {
+  #section6 .informations {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 #section6 .informations .infos {
