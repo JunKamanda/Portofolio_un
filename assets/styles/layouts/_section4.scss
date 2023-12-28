@@ -16,6 +16,10 @@
             align-items: center;
             gap: 14px;
             margin: 0 0 10px;
+            &:hover li:not(:hover){
+                background: transparent;
+                color: $rose;
+            }
 
             li{
                 color: $rose;

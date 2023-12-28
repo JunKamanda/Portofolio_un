@@ -68,7 +68,7 @@ h2 span {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  max-width: 1100px;
+  max-width: 1140px;
   margin: 0 auto;
   padding: 5px 0;
   width: 100%;
@@ -113,6 +113,12 @@ h2 span {
   gap: 7px;
   width: 100%;
   font-size: 0.8rem;
+}
+#header .nav_section nav ul:hover li:not(:hover) a {
+  color: black;
+}
+#header .nav_section nav ul:hover li:not(:hover):after {
+  height: 0;
 }
 @media screen and (max-width: 800px) {
   #header .nav_section nav ul {
@@ -183,6 +189,29 @@ h2 span {
 #header .hero_section .left {
   padding: 0 10px;
 }
+#header .hero_section .left h2 {
+  overflow: hidden;
+  margin-left: -400px;
+  width: 100%;
+  -webkit-animation: animetitle 7s forwards;
+          animation: animetitle 7s forwards;
+}
+@-webkit-keyframes animetitle {
+  50% {
+    margin-left: 200px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
+@keyframes animetitle {
+  50% {
+    margin-left: 200px;
+  }
+  100% {
+    margin-left: 0;
+  }
+}
 @media screen and (max-width: 800px) {
   #header .hero_section .left h2 {
     font-size: 2rem;
@@ -216,6 +245,7 @@ h2 span {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 170px;
 }
 
 #section1 {
@@ -600,6 +630,10 @@ h2 span {
           align-items: center;
   gap: 14px;
   margin: 0 0 10px;
+}
+#section4 .card_content ul:hover li:not(:hover) {
+  background: transparent;
+  color: rgb(207, 118, 150);
 }
 #section4 .card_content ul li {
   color: rgb(207, 118, 150);
